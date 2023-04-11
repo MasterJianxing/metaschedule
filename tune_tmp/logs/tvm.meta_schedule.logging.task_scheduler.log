@@ -1,0 +1,15 @@
+2023-04-11 10:46:36 [INFO] Logging directory: ./tune_tmp/logs
+2023-04-11 10:46:36 [INFO] LocalBuilder: max_workers = 12
+2023-04-11 10:46:36 [INFO] LocalRunner: max_workers = 1
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #0: "fused_nn_conv2d"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #1: "fused_nn_conv2d_1"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #2: "fused_nn_conv2d_2"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #3: "fused_nn_conv2d_3"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #4: "fused_add"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #5: "fused_nn_conv2d_add_nn_relu"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #6: "fused_nn_max_pool2d_multiply_add_nn_relu"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #7: "fused_nn_conv2d_add_nn_relu_1"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #8: "fused_nn_conv2d_add"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #9: "fused_multiply_add_nn_relu"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #10: "fused_nn_conv2d_add_nn_relu_2"
+2023-04-11 10:46:37 [INFO] [task_scheduler.cc:159] Initializing Task #11: "fused_nn_contrib_conv2d_winograd_without_weight_transform_add_nn_relu"
