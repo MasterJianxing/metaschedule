@@ -1,0 +1,52 @@
+ ID |                                        Name | Time (min) | Percentage 
+----------------------------------------------------------------------------
+    |                                       Total |    22.8890 |   100.0000 
+  1 |                   EvoSearch/Evolve/Mutation |    12.5836 |    54.9767 
+  2 |     EvoSearch/Evolve/PredictNormalizedScore |     2.8236 |    12.3359 
+  3 |              EvoSearch/SampleInitPopulation |     2.7086 |    11.8337 
+  4 |                               SendToBuilder |     1.2891 |     5.6318 
+  5 |                                SendToRunner |     1.1870 |     5.1858 
+  6 |                       PostTuningCompilation |     0.8753 |     3.8241 
+  7 |                              TaskExtraction |     0.6939 |     3.0317 
+  8 |                       EvoSearch/Evolve/Misc |     0.4782 |     2.0894 
+  9 |             MeasureCallback/UpdateCostModel |     0.0573 |     0.2505 
+ 10 |              EvoSearch/PickBestFromDatabase |     0.0274 |     0.1198 
+ 11 |               MeasureCallback/AddToDatabase |     0.0034 |     0.0148 
+ 12 |                 EvoSearch/PickWithEpsGreedy |     0.0008 |     0.0037 
+ 13 |                              InitializeTask |     0.0006 |     0.0028 
+ 14 |         MeasureCallback/RemoveBuildArtifact |     0.0003 |     0.0012 
+ 15 |                           JoinRunnerFutures |     0.0001 |     0.0004 
+ 16 | EvoSearch/Evolve/Misc/CopyMeasuredWorkloads |     0.0000 |     0.0000 
+----------------------------------------------------------------------------
+One or more operators have not been tuned. Please tune your model for better performance. Use DEBUG logging level to see more details.
+[18:06:03] /home/pan/tvm/src/arith/int_set.cc:286: Warning: Return Everything in CombineInterval Div
+[18:06:03] /home/pan/tvm/src/arith/int_set.cc:324: Warning: Return Everything in CombineInterval Mod
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:189: LowerFloorMod: Cannot decide the sign of divsor and divident
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:135: LowerFloorDiv: Cannot decide the sign of divisor
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:189: LowerFloorMod: Cannot decide the sign of divsor and divident
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:135: LowerFloorDiv: Cannot decide the sign of divisor
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:135: LowerFloorDiv: Cannot decide the sign of divisor
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:189: LowerFloorMod: Cannot decide the sign of divsor and divident
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:189: LowerFloorMod: Cannot decide the sign of divsor and divident
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:135: LowerFloorDiv: Cannot decide the sign of divisor
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:135: LowerFloorDiv: Cannot decide the sign of divisor
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:189: LowerFloorMod: Cannot decide the sign of divsor and divident
+[18:06:03] /home/pan/tvm/src/tir/transforms/lower_intrin.cc:189: LowerFloorMod: Cannot decide the sign of divsor and divident
+terminate called after throwing an instance of 'tvm::runtime::InternalError'
+  what():  [18:06:05] /home/pan/tvm/src/runtime/cuda/cuda_device_api.cc:135: 
+---------------------------------------------------------------
+An error occurred during the execution of TVM.
+For more information, please see: https://tvm.apache.org/docs/errors.html
+---------------------------------------------------------------
+  Check failed: (e == cudaSuccess || e == cudaErrorCudartUnloading) is false: CUDA: unspecified launch failure
+Stack trace:
+  0: tvm::runtime::CUDADeviceAPI::FreeDataSpace(DLDevice, void*)
+  1: tvm::runtime::NDArray::Internal::DefaultDeleter(tvm::runtime::Object*)
+  2: tvm::runtime::GraphExecutor::~GraphExecutor()
+  3: _ZN3tvm7runtime18SimpleObjAllocator7HandlerIN
+  4: _ZN3tvm7runtime20GraphExecutorFactory14Executo
+  5: tvm::runtime::PackedFuncObj::Extractor<tvm::runtime::PackedFuncSubObj<tvm::runtime::GraphExecutorFactory::GetFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, tvm::runtime::ObjectPtr<tvm::runtime::Object> const&)::{lambda(tvm::runtime::TVMArgs, tvm::runtime::TVMRetValue*)#1}> >::Call(tvm::runtime::PackedFuncObj const*, tvm::runtime::TVMArgs, tvm::runtime::TVMRetValue*)
+  6: TVMFuncCall
+
+
+已放弃 (核心已转储)
